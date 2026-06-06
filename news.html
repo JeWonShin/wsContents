@@ -19,7 +19,7 @@
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="index.html" class="text-xl font-black text-brand">웅's송탄쪽갈비</a>
+      <a href="index.html" class="flex items-center"><img src="images/logo.jpeg" alt="웅's송탄쪽갈비" class="h-11 w-auto" style="max-width:160px;object-fit:contain;"></a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
         <a href="menu.html" class="text-gray-700 hover:text-brand transition-colors">메뉴</a>
         <a href="stores.html" class="text-gray-700 hover:text-brand transition-colors">매장 안내</a>
@@ -49,7 +49,7 @@
     </section>
 
     <section class="py-12 px-4">
-      <div class="max-w-3xl mx-auto">
+      <div class="max-w-4xl mx-auto">
 
         <!-- 탭 -->
         <div class="flex gap-1 border-b mb-8">
@@ -58,34 +58,30 @@
         </div>
 
         <!-- 공지사항 목록 -->
-        <div id="notice-list" class="flex flex-col divide-y">
-          <div class="py-4 flex items-start gap-4 hover:bg-gray-50 px-2 rounded cursor-pointer">
-            <span class="text-xs bg-brand text-white px-2 py-1 rounded shrink-0 mt-0.5">공지</span>
-            <div class="flex-1">
-              <p class="font-medium mb-1">홈페이지 오픈 안내</p>
-              <p class="text-sm text-gray-500">쪽갈비 공식 홈페이지가 오픈했습니다. 다양한 정보를 확인해보세요.</p>
+        <div id="notice-list">
+          <div class="flex items-start gap-4 py-5 border-b hover:bg-gray-50 px-3 rounded-lg cursor-pointer transition-colors">
+            <span class="text-xs bg-brand text-white px-2.5 py-1 rounded shrink-0 mt-0.5 font-medium">공지</span>
+            <div class="flex-1 min-w-0">
+              <p class="font-bold mb-1">홈페이지 오픈 안내</p>
+              <p class="text-sm text-gray-500">웅's송탄쪽갈비 공식 홈페이지가 오픈했습니다. 메뉴, 매장 정보 등 다양한 정보를 확인해보세요.</p>
             </div>
-            <p class="text-xs text-gray-400 shrink-0">2025.00.00</p>
+            <p class="text-xs text-gray-400 shrink-0 mt-0.5">2025.06.06</p>
           </div>
-          <div class="py-4 flex items-start gap-4 hover:bg-gray-50 px-2 rounded cursor-pointer">
-            <span class="text-xs bg-gray-200 text-gray-600 px-2 py-1 rounded shrink-0 mt-0.5">공지</span>
-            <div class="flex-1">
-              <p class="font-medium mb-1">[공지] 내용을 입력해주세요</p>
-              <p class="text-sm text-gray-500">공지 내용을 여기에 입력합니다.</p>
-            </div>
-            <p class="text-xs text-gray-400 shrink-0">2025.00.00</p>
-          </div>
+          <p class="text-center text-sm text-gray-400 py-12">등록된 공지사항이 없습니다.</p>
         </div>
 
-        <!-- 이벤트 목록 -->
-        <div id="event-list" class="hidden flex flex-col divide-y">
-          <div class="py-4 flex items-start gap-4 hover:bg-gray-50 px-2 rounded cursor-pointer">
-            <span class="text-xs px-2 py-1 rounded shrink-0 mt-0.5 font-medium" style="background:#fff3cd; color:#856404;">이벤트</span>
-            <div class="flex-1">
-              <p class="font-medium mb-1">[이벤트] 내용을 입력해주세요</p>
-              <p class="text-sm text-gray-500">이벤트 내용을 여기에 입력합니다.</p>
+        <!-- 이벤트 카드 목록 -->
+        <div id="event-list" class="hidden">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="border rounded-xl overflow-hidden hover:shadow-md transition-shadow cursor-pointer group">
+              <div class="h-44 flex items-center justify-center text-5xl" style="background: linear-gradient(135deg, #2d0a0a, #8B2331);">🎉</div>
+              <div class="p-4">
+                <span class="text-xs font-semibold px-2 py-0.5 rounded-full mb-2 inline-block" style="background:#fff3cd; color:#856404;">이벤트</span>
+                <h3 class="font-bold mb-1 group-hover:text-brand transition-colors">[이벤트] 내용을 입력해주세요</h3>
+                <p class="text-sm text-gray-500 line-clamp-2">이벤트 내용을 여기에 입력합니다.</p>
+                <p class="text-xs text-gray-400 mt-3">2025.00.00</p>
+              </div>
             </div>
-            <p class="text-xs text-gray-400 shrink-0">2025.00.00</p>
           </div>
         </div>
 
@@ -104,7 +100,7 @@
       </div>
       <div class="border-t border-gray-700 pt-6 text-xs text-gray-500">
         <p>상호: 웅's송탄쪽갈비 | 대표자: [입력 예정] | 사업자등록번호: [입력 예정] | 주소: 경기도 평택시 서정역로36번길 43 1층</p>
-        <p class="mt-1">© 2025 웅's송탄쪽갈비. All rights reserved.</p>
+        <div class="flex gap-4 mb-2"><a href="privacy.html" class="hover:text-white">개인정보처리방침</a><a href="privacy.html#terms" class="hover:text-white">이용약관</a></div><p class="mt-1">© 2025 웅's송탄쪽갈비. All rights reserved.</p>
       </div>
     </div>
   </footer>
