@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>메뉴 — 쪽갈비</title>
+  <title>메뉴 — 웅's송탄쪽갈비</title>
   <meta name="description" content="쪽갈비의 다양한 메뉴를 확인해보세요.">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -20,7 +20,7 @@
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="index.html" class="text-2xl font-black text-brand">쪽갈비</a>
+      <a href="index.html" class="text-xl font-black text-brand">웅's송탄쪽갈비</a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
         <a href="menu.html" class="text-brand font-bold">메뉴</a>
         <a href="stores.html" class="text-gray-700 hover:text-brand transition-colors">매장 안내</a>
@@ -58,60 +58,80 @@
         <!-- 카테고리 탭 -->
         <div class="flex gap-1 border-b mb-10 overflow-x-auto pb-px">
           <button class="tab-btn active px-5 py-3 text-sm font-medium border-b-2 border-transparent whitespace-nowrap" data-tab="all">전체</button>
-          <button class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500 whitespace-nowrap" data-tab="signature">시그니처</button>
+          <button class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500 whitespace-nowrap" data-tab="main">쪽갈비</button>
           <button class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500 whitespace-nowrap" data-tab="side">사이드</button>
           <button class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500 whitespace-nowrap" data-tab="meal">식사</button>
-          <button class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500 whitespace-nowrap" data-tab="drink">주류·음료</button>
         </div>
 
-        <!-- 시그니처 -->
-        <div class="menu-section mb-12" data-category="signature">
+        <!-- 쪽갈비 -->
+        <div class="menu-section mb-12" data-category="main">
           <h2 class="text-lg font-black mb-6 flex items-center gap-2">
-            <span class="w-1 h-5 bg-brand rounded-full inline-block"></span> 시그니처
+            <span class="w-1 h-5 bg-brand rounded-full inline-block"></span> 쪽갈비
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="border rounded-xl overflow-hidden menu-card">
+              <div class="h-40 flex items-center justify-center text-6xl" style="background: linear-gradient(135deg, #1a1a1a, #555);">🍖</div>
+              <div class="p-4">
+                <div class="flex justify-between items-start mb-1">
+                  <h3 class="font-bold">소금구이 1kg</h3>
+                  <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full ml-2 shrink-0">추천</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-2">숯불에 구워내는 본연의 맛 소금구이</p>
+                <span class="font-black text-brand">33,000원</span>
+              </div>
+            </div>
             <div class="border rounded-xl overflow-hidden menu-card">
               <div class="h-40 flex items-center justify-center text-6xl" style="background: linear-gradient(135deg, #2d0a0a, #8B2331);">🍖</div>
               <div class="p-4">
                 <div class="flex justify-between items-start mb-1">
-                  <h3 class="font-bold">매운 쪽갈비</h3>
-                  <span class="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full ml-2 shrink-0">시그니처</span>
+                  <h3 class="font-bold">양념구이 1kg</h3>
+                  <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full ml-2 shrink-0">추천</span>
                 </div>
-                <p class="text-xs text-gray-500 mb-2">청양고추 특제 소스로 얼큰하게</p>
-                <div class="flex items-center justify-between">
-                  <span class="font-black text-brand">30,000원</span>
-                  <span class="text-red-500 text-xs">🌶🌶🌶</span>
-                </div>
+                <p class="text-xs text-gray-500 mb-2">특제 양념으로 재운 쪽갈비</p>
+                <span class="font-black text-brand">34,000원</span>
               </div>
             </div>
             <div class="border rounded-xl overflow-hidden menu-card">
               <div class="h-40 flex items-center justify-center text-6xl" style="background: linear-gradient(135deg, #1a1505, #B8860B);">🍖</div>
               <div class="p-4">
-                <div class="flex justify-between items-start mb-1">
-                  <h3 class="font-bold">간장 쪽갈비</h3>
-                  <span class="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full ml-2 shrink-0">인기</span>
-                </div>
-                <p class="text-xs text-gray-500 mb-2">달콤한 간장 양념에 재운 부드러운 맛</p>
-                <span class="font-black text-brand">28,000원</span>
+                <h3 class="font-bold mb-1">반반 쪽갈비</h3>
+                <p class="text-xs text-gray-500 mb-2">소금구이 + 양념구이 반반 구성</p>
+                <span class="font-black text-brand">34,000원</span>
               </div>
             </div>
             <div class="border rounded-xl overflow-hidden menu-card">
-              <div class="h-40 flex items-center justify-center text-6xl" style="background: linear-gradient(135deg, #1a1a1a, #555);">🍖</div>
+              <div class="h-40 flex items-center justify-center text-6xl" style="background: linear-gradient(135deg, #1a1505, #5a4500);">🍖</div>
               <div class="p-4">
-                <h3 class="font-bold mb-1">소금 쪽갈비</h3>
-                <p class="text-xs text-gray-500 mb-2">재료 본연의 맛을 살린 고급 소금구이</p>
-                <span class="font-black text-brand">28,000원</span>
+                <h3 class="font-bold mb-1">마늘간장 1kg</h3>
+                <p class="text-xs text-gray-500 mb-2">고소한 마늘간장 양념 쪽갈비</p>
+                <span class="font-black text-brand">34,000원</span>
+              </div>
+            </div>
+            <div class="border rounded-xl overflow-hidden menu-card">
+              <div class="h-40 flex items-center justify-center text-6xl" style="background: linear-gradient(135deg, #2d0a0a, #8B2331);">🍖</div>
+              <div class="p-4">
+                <h3 class="font-bold mb-1">매콤바베큐 1kg</h3>
+                <p class="text-xs text-gray-500 mb-2">달콤하고 매콤한 바베큐 소스 쪽갈비</p>
+                <span class="font-black text-brand">34,000원</span>
+              </div>
+            </div>
+            <div class="border rounded-xl overflow-hidden menu-card">
+              <div class="h-40 flex items-center justify-center text-6xl" style="background: linear-gradient(135deg, #1a1505, #B8860B);">🍖🍖</div>
+              <div class="p-4">
+                <h3 class="font-bold mb-1">양념반반</h3>
+                <p class="text-xs text-gray-500 mb-2">두 가지 양념을 한 번에</p>
+                <span class="font-black text-brand">35,000원</span>
               </div>
             </div>
             <div class="border rounded-xl overflow-hidden menu-card sm:col-span-2 lg:col-span-1">
-              <div class="h-40 flex items-center justify-center text-6xl" style="background: linear-gradient(135deg, #0a1a05, #2d5a1a);">🍖🍖</div>
+              <div class="h-40 flex items-center justify-center text-6xl" style="background: linear-gradient(135deg, #1a1a1a, #555);">🍖</div>
               <div class="p-4">
                 <div class="flex justify-between items-start mb-1">
-                  <h3 class="font-bold">쪽갈비 세트 (2인)</h3>
-                  <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full ml-2 shrink-0">추천</span>
+                  <h3 class="font-bold">500g</h3>
+                  <span class="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full ml-2 shrink-0">1인</span>
                 </div>
-                <p class="text-xs text-gray-500 mb-2">시그니처 2종 + 사이드 2종 구성</p>
-                <span class="font-black text-brand">55,000원</span>
+                <p class="text-xs text-gray-500 mb-2">소금 / 양념 / 마늘 / 매콤바베큐 중 선택</p>
+                <span class="font-black text-brand">17,000원</span>
               </div>
             </div>
           </div>
@@ -124,63 +144,49 @@
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div class="border rounded-xl p-4 flex justify-between items-center">
-              <div><p class="font-medium">공기밥</p></div>
+              <p class="font-medium">양푼이도시락</p>
+              <span class="font-bold text-brand">5,000원</span>
+            </div>
+            <div class="border rounded-xl p-4 flex justify-between items-center">
+              <p class="font-medium">치즈추가</p>
+              <span class="font-bold text-brand">5,000원</span>
+            </div>
+            <div class="border rounded-xl p-4 flex justify-between items-center">
+              <p class="font-medium">계란찜</p>
+              <span class="font-bold text-brand">4,000원</span>
+            </div>
+            <div class="border rounded-xl p-4 flex justify-between items-center">
+              <p class="font-medium">공기밥</p>
               <span class="font-bold text-brand">1,000원</span>
             </div>
             <div class="border rounded-xl p-4 flex justify-between items-center">
-              <div><p class="font-medium">된장찌개</p></div>
-              <span class="font-bold text-brand">2,000원</span>
-            </div>
-            <div class="border rounded-xl p-4 flex justify-between items-center">
-              <div><p class="font-medium">계란찜</p></div>
-              <span class="font-bold text-brand">3,000원</span>
+              <p class="font-medium">파인샤베트</p>
+              <span class="font-bold text-brand">7,000원</span>
             </div>
           </div>
         </div>
 
         <!-- 식사 -->
-        <div class="menu-section mb-12" data-category="meal">
+        <div class="menu-section" data-category="meal">
           <h2 class="text-lg font-black mb-6 flex items-center gap-2">
             <span class="w-1 h-5 bg-brand rounded-full inline-block"></span> 식사
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div class="border rounded-xl p-4 flex justify-between items-center">
-              <div>
-                <p class="font-medium">냉면</p>
-                <p class="text-xs text-gray-400">물냉면 / 비빔냉면</p>
-              </div>
-              <span class="font-bold text-brand">5,000원</span>
-            </div>
-            <div class="border rounded-xl p-4 flex justify-between items-center">
-              <div>
-                <p class="font-medium">볶음밥</p>
-                <p class="text-xs text-gray-400">갈비 육수로 볶아낸 볶음밥</p>
-              </div>
+              <p class="font-medium">라면</p>
               <span class="font-bold text-brand">4,000원</span>
             </div>
-          </div>
-        </div>
-
-        <!-- 주류·음료 -->
-        <div class="menu-section" data-category="drink">
-          <h2 class="text-lg font-black mb-6 flex items-center gap-2">
-            <span class="w-1 h-5 bg-brand rounded-full inline-block"></span> 주류·음료
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div class="border rounded-xl p-4 flex justify-between items-center">
-              <p class="font-medium">소주</p>
-              <span class="font-bold text-brand">5,000원</span>
+              <p class="font-medium">김치손수제비</p>
+              <span class="font-bold text-brand">6,000원</span>
             </div>
             <div class="border rounded-xl p-4 flex justify-between items-center">
-              <p class="font-medium">맥주</p>
-              <span class="font-bold text-brand">5,000원</span>
+              <p class="font-medium">간장계란밥</p>
+              <span class="font-bold text-brand">3,000원</span>
             </div>
             <div class="border rounded-xl p-4 flex justify-between items-center">
-              <div>
-                <p class="font-medium">음료수</p>
-                <p class="text-xs text-gray-400">콜라 / 사이다 / 주스</p>
-              </div>
-              <span class="font-bold text-brand">2,000원</span>
+              <p class="font-medium">김치우동</p>
+              <span class="font-bold text-brand">7,000원</span>
             </div>
           </div>
         </div>
@@ -195,7 +201,7 @@
     <div class="max-w-6xl mx-auto px-4 py-10">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-sm">
         <div class="col-span-2 md:col-span-1">
-          <p class="text-white font-black text-xl mb-2">쪽갈비</p>
+          <p class="text-white font-black text-xl mb-2">웅's송탄쪽갈비</p>
           <p class="leading-relaxed">정통 쪽갈비 전문점</p>
         </div>
         <div>
@@ -216,12 +222,12 @@
         </div>
         <div>
           <p class="text-white font-semibold mb-3">연락처</p>
-          <p class="text-white font-bold">000-0000-0000</p>
+          <p class="text-white font-bold">031-665-0607</p>
           <p class="text-xs mt-1 text-gray-500">평일 09:00 – 18:00</p>
         </div>
       </div>
       <div class="border-t border-gray-700 pt-6 text-xs text-gray-500">
-        <p>상호: 쪽갈비 | 대표자: 홍길동 | 사업자등록번호: 000-00-00000 | 주소: 서울특별시 OO구 OO동</p>
+        <p>상호: 쪽갈비 | 대표자: 홍길동 | 사업자등록번호: 000-00-00000 | 주소: 경기도 평택시 서정역로36번길 43 1층</p>
         <p class="mt-1">© 2025 쪽갈비. All rights reserved.</p>
       </div>
     </div>

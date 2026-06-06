@@ -1,6 +1,14 @@
 [
-  { "id": 1, "name": "강남점", "region": "서울", "address": "서울 강남구 테헤란로 000", "tel": "02-0000-0001", "hours": "11:00 – 22:00", "parking": true, "closed": "매주 월요일" },
-  { "id": 2, "name": "홍대점", "region": "서울", "address": "서울 마포구 와우산로 000", "tel": "02-0000-0002", "hours": "11:00 – 23:00", "parking": false, "closed": "연중무휴" },
-  { "id": 3, "name": "수원점", "region": "경기", "address": "경기 수원시 영통구 000", "tel": "031-0000-0003", "hours": "11:00 – 22:00", "parking": true, "closed": "매주 월요일" },
-  { "id": 4, "name": "부산 서면점", "region": "부산", "address": "부산 부산진구 서면로 000", "tel": "051-0000-0004", "hours": "11:00 – 22:00", "parking": true, "closed": "연중무휴" }
+  {
+    "id": 1,
+    "name": "웅's송탄쪽갈비 본점",
+    "region": "경기",
+    "address": "경기도 평택시 서정역로36번길 43 1층",
+    "tel": "031-665-0607",
+    "hours": "17:00 – 23:00",
+    "parking": false,
+    "closed": "연중무휴",
+    "features": ["야외자리", "셀프바", "배달"],
+    "image": "images/stores/main.webp"
+  }
 ]
