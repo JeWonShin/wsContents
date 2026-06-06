@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>브랜드 소개 — 쪽갈비</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: '#8B2331', gold: '#B8860B' }, fontFamily: { sans: ['"Noto Sans KR"', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-black text-brand">쪽갈비</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="menu.html" class="text-gray-700 hover:text-brand transition-colors">메뉴</a>
+        <a href="stores.html" class="text-gray-700 hover:text-brand transition-colors">매장 안내</a>
+        <a href="about.html" class="text-brand font-bold">브랜드 소개</a>
+        <a href="franchise.html" class="text-gray-700 hover:text-brand transition-colors">가맹 안내</a>
+        <a href="news.html" class="text-gray-700 hover:text-brand transition-colors">공지사항</a>
+        <a href="contact.html" class="bg-brand text-white px-4 py-2 rounded hover:bg-red-900 transition-colors">가맹 문의</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden p-2 text-gray-700"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-nav" class="hidden md:hidden bg-white border-t text-sm font-medium">
+      <div class="flex flex-col divide-y px-4">
+        <a href="menu.html" class="py-3 text-gray-700">메뉴</a>
+        <a href="stores.html" class="py-3 text-gray-700">매장 안내</a>
+        <a href="about.html" class="py-3 text-brand font-bold">브랜드 소개</a>
+        <a href="franchise.html" class="py-3 text-gray-700">가맹 안내</a>
+        <a href="news.html" class="py-3 text-gray-700">공지사항</a>
+        <a href="contact.html" class="py-3 text-brand font-bold">가맹 문의</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-20 px-4 text-white text-center" style="background: linear-gradient(135deg, #1a0808, #8B2331);">
+      <h1 class="text-3xl md:text-5xl font-black mb-4">브랜드 소개</h1>
+      <p class="text-gray-300 text-lg">쪽갈비의 이야기를 소개합니다</p>
+    </section>
+
+    <!-- 창업 스토리 -->
+    <section class="py-16 px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="h-64 rounded-xl flex items-center justify-center text-8xl" style="background: linear-gradient(135deg, #1a0808, #8B2331);">🍖</div>
+          <div>
+            <p class="text-sm font-medium text-brand mb-2 tracking-widest">OUR STORY</p>
+            <h2 class="text-2xl font-black mb-4">한 접시의 쪽갈비에서<br>시작된 이야기</h2>
+            <p class="text-gray-600 leading-relaxed">
+              [창업 스토리를 입력해주세요. 어떤 계기로 이 브랜드를 시작하게 되었는지, 어떤 가치를 추구하는지 등을 여기에 담아주세요.]
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 대표 인사말 -->
+    <section class="py-16 px-4 bg-gray-50">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center text-4xl mx-auto mb-6">👤</div>
+        <blockquote class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 italic">
+          "[대표님 인사말을 여기에 입력해주세요. 브랜드에 대한 철학, 고객에게 전하고 싶은 메시지 등을 담아주세요.]"
+        </blockquote>
+        <p class="font-bold text-gray-900">홍길동 대표</p>
+        <p class="text-sm text-gray-500">쪽갈비 창업자</p>
+      </div>
+    </section>
+
+    <!-- 쪽갈비 자랑거리 -->
+    <section class="py-16 px-4">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-center text-2xl md:text-3xl font-black mb-12">쪽갈비의 자랑</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="border rounded-xl p-6">
+            <div class="text-4xl mb-4">🥩</div>
+            <h3 class="font-black text-lg mb-2">엄선된 부위</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">[갈비의 어떤 부위를 사용하는지, 어떤 기준으로 선별하는지 설명해주세요.]</p>
+          </div>
+          <div class="border rounded-xl p-6">
+            <div class="text-4xl mb-4">🧂</div>
+            <h3 class="font-black text-lg mb-2">비법 숙성</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">[양념 비법이나 숙성 방법에 대해 소개해주세요. 차별화된 점을 강조해주세요.]</p>
+          </div>
+          <div class="border rounded-xl p-6">
+            <div class="text-4xl mb-4">🌿</div>
+            <h3 class="font-black text-lg mb-2">원산지 고집</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">[식재료 원산지에 대한 정책, 신선도 관리 방법 등을 설명해주세요.]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 연혁 -->
+    <section class="py-16 px-4 bg-gray-50">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-center text-2xl font-black mb-12">연혁</h2>
+        <div class="relative pl-8 border-l-2 border-brand flex flex-col gap-8">
+          <div class="relative">
+            <div class="absolute -left-10 w-4 h-4 rounded-full bg-brand border-2 border-white"></div>
+            <p class="text-sm font-bold text-brand">20XX년</p>
+            <p class="font-medium">브랜드 창업 및 1호점 오픈</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-10 w-4 h-4 rounded-full bg-brand border-2 border-white"></div>
+            <p class="text-sm font-bold text-brand">20XX년</p>
+            <p class="font-medium">[주요 이정표를 입력해주세요]</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-10 w-4 h-4 rounded-full bg-brand border-2 border-white"></div>
+            <p class="text-sm font-bold text-brand">20XX년</p>
+            <p class="font-medium">[주요 이정표를 입력해주세요]</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-10 w-4 h-4 rounded-full bg-gold border-2 border-white"></div>
+            <p class="text-sm font-bold" style="color:#B8860B">현재</p>
+            <p class="font-medium">전국 OO개 가맹점 운영 중</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 mt-0">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-sm">
+        <div class="col-span-2 md:col-span-1"><p class="text-white font-black text-xl mb-2">쪽갈비</p><p>정통 쪽갈비 전문점</p></div>
+        <div><p class="text-white font-semibold mb-3">바로가기</p><div class="flex flex-col gap-2"><a href="menu.html" class="hover:text-white">메뉴</a><a href="stores.html" class="hover:text-white">매장 안내</a><a href="franchise.html" class="hover:text-white">가맹 안내</a><a href="contact.html" class="hover:text-white">가맹 문의</a></div></div>
+        <div><p class="text-white font-semibold mb-3">가맹 안내</p><div class="flex flex-col gap-2"><a href="franchise.html" class="hover:text-white">가맹 소개</a><a href="contact.html" class="hover:text-white">가맹 문의</a></div></div>
+        <div><p class="text-white font-semibold mb-3">연락처</p><p class="text-white font-bold">000-0000-0000</p><p class="text-xs mt-1 text-gray-500">평일 09:00 – 18:00</p></div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 text-xs text-gray-500">
+        <p>상호: 쪽갈비 | 대표자: 홍길동 | 사업자등록번호: 000-00-00000 | 주소: 서울특별시 OO구 OO동</p>
+        <p class="mt-1">© 2025 쪽갈비. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

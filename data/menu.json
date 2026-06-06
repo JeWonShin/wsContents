@@ -1,0 +1,14 @@
+[
+  { "id": 1, "category": "signature", "name": "매운 쪽갈비", "desc": "청양고추 특제 소스로 얼큰하게 즐기는 쪽갈비", "price": 30000, "spicy": 3, "badge": "시그니처" },
+  { "id": 2, "category": "signature", "name": "간장 쪽갈비", "desc": "달콤한 간장 양념에 재운 부드러운 쪽갈비", "price": 28000, "spicy": 0, "badge": "인기" },
+  { "id": 3, "category": "signature", "name": "소금 쪽갈비", "desc": "재료 본연의 맛을 살린 고급 소금구이", "price": 28000, "spicy": 0, "badge": "" },
+  { "id": 4, "category": "signature", "name": "쪽갈비 세트 (2인)", "desc": "시그니처 2종 + 사이드 2종 구성", "price": 55000, "spicy": 0, "badge": "추천" },
+  { "id": 5, "category": "side", "name": "공기밥", "desc": "", "price": 1000, "spicy": 0, "badge": "" },
+  { "id": 6, "category": "side", "name": "된장찌개", "desc": "", "price": 2000, "spicy": 0, "badge": "" },
+  { "id": 7, "category": "side", "name": "계란찜", "desc": "", "price": 3000, "spicy": 0, "badge": "" },
+  { "id": 8, "category": "meal", "name": "냉면 (물/비빔)", "desc": "식사 대용으로 즐기는 시원한 냉면", "price": 5000, "spicy": 1, "badge": "" },
+  { "id": 9, "category": "meal", "name": "볶음밥", "desc": "갈비 육수로 볶아낸 고소한 볶음밥", "price": 4000, "spicy": 0, "badge": "" },
+  { "id": 10, "category": "drink", "name": "소주", "desc": "", "price": 5000, "spicy": 0, "badge": "" },
+  { "id": 11, "category": "drink", "name": "맥주", "desc": "", "price": 5000, "spicy": 0, "badge": "" },
+  { "id": 12, "category": "drink", "name": "음료수", "desc": "콜라 / 사이다 / 주스", "price": 2000, "spicy": 0, "badge": "" }
+]

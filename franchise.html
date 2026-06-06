@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가맹 안내 — 쪽갈비</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: '#8B2331', gold: '#B8860B' }, fontFamily: { sans: ['"Noto Sans KR"', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-black text-brand">쪽갈비</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="menu.html" class="text-gray-700 hover:text-brand transition-colors">메뉴</a>
+        <a href="stores.html" class="text-gray-700 hover:text-brand transition-colors">매장 안내</a>
+        <a href="about.html" class="text-gray-700 hover:text-brand transition-colors">브랜드 소개</a>
+        <a href="franchise.html" class="text-brand font-bold">가맹 안내</a>
+        <a href="news.html" class="text-gray-700 hover:text-brand transition-colors">공지사항</a>
+        <a href="contact.html" class="bg-brand text-white px-4 py-2 rounded hover:bg-red-900 transition-colors">가맹 문의</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden p-2 text-gray-700"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-nav" class="hidden md:hidden bg-white border-t text-sm font-medium">
+      <div class="flex flex-col divide-y px-4">
+        <a href="menu.html" class="py-3 text-gray-700">메뉴</a>
+        <a href="stores.html" class="py-3 text-gray-700">매장 안내</a>
+        <a href="about.html" class="py-3 text-gray-700">브랜드 소개</a>
+        <a href="franchise.html" class="py-3 text-brand font-bold">가맹 안내</a>
+        <a href="news.html" class="py-3 text-gray-700">공지사항</a>
+        <a href="contact.html" class="py-3 text-brand font-bold">가맹 문의</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 헤더 -->
+    <section class="py-20 px-4 text-white text-center" style="background: linear-gradient(135deg, #1a0808, #8B2331);">
+      <p class="text-sm tracking-widest mb-3 font-medium" style="color: #B8860B;">FRANCHISE</p>
+      <h1 class="text-3xl md:text-5xl font-black mb-4">쪽갈비와 함께<br>성공 창업을 시작하세요</h1>
+      <p class="text-gray-300 mb-8">검증된 브랜드력 · 체계적인 본사 지원 · 합리적인 창업 비용</p>
+      <a href="contact.html" class="inline-block text-white font-bold px-8 py-4 rounded text-lg" style="background: #B8860B;">무료 가맹 상담 신청</a>
+    </section>
+
+    <!-- 핵심 수치 -->
+    <section class="py-12 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-3xl font-black text-brand mb-1">OO+</p>
+          <p class="text-sm text-gray-500">전국 가맹점</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-3xl font-black text-brand mb-1">OO년</p>
+          <p class="text-sm text-gray-500">브랜드 운영 경력</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-3xl font-black text-brand mb-1">OO%</p>
+          <p class="text-sm text-gray-500">가맹점 재계약률</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-3xl font-black text-brand mb-1">OO일</p>
+          <p class="text-sm text-gray-500">평균 교육 기간</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 본사 경쟁력 -->
+    <section class="py-16 px-4">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-center text-2xl md:text-3xl font-black mb-12">본사 경쟁력 5가지</h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <div class="text-center p-6 border rounded-xl">
+            <div class="text-4xl mb-3">🏭</div>
+            <h3 class="font-bold mb-2">직영 물류</h3>
+            <p class="text-sm text-gray-500">본사 직영 물류 센터에서 신선 식재료 직송</p>
+          </div>
+          <div class="text-center p-6 border rounded-xl">
+            <div class="text-4xl mb-3">👨‍🍳</div>
+            <h3 class="font-bold mb-2">체계적 교육</h3>
+            <p class="text-sm text-gray-500">오픈 전 충분한 현장 교육 지원</p>
+          </div>
+          <div class="text-center p-6 border rounded-xl">
+            <div class="text-4xl mb-3">📊</div>
+            <h3 class="font-bold mb-2">본사 마케팅</h3>
+            <p class="text-sm text-gray-500">SNS·온라인 마케팅 본사에서 전담</p>
+          </div>
+          <div class="text-center p-6 border rounded-xl">
+            <div class="text-4xl mb-3">🛠️</div>
+            <h3 class="font-bold mb-2">인테리어 지원</h3>
+            <p class="text-sm text-gray-500">통일된 브랜드 이미지 구축 지원</p>
+          </div>
+          <div class="text-center p-6 border rounded-xl">
+            <div class="text-4xl mb-3">📞</div>
+            <h3 class="font-bold mb-2">상시 지원</h3>
+            <p class="text-sm text-gray-500">운영 중 문제 발생 시 빠른 본사 대응</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 창업 비용 -->
+    <section id="cost" class="py-16 px-4 bg-gray-50">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-center text-2xl md:text-3xl font-black mb-4">창업 비용</h2>
+        <p class="text-center text-gray-500 mb-10">매장 규모에 따라 달라질 수 있습니다. 정확한 비용은 상담을 통해 안내드립니다.</p>
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <table class="w-full text-sm">
+            <thead class="bg-brand text-white">
+              <tr>
+                <th class="px-5 py-3 text-left font-semibold">항목</th>
+                <th class="px-5 py-3 text-right font-semibold">소형 (15평)</th>
+                <th class="px-5 py-3 text-right font-semibold">중형 (25평)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y">
+              <tr class="hover:bg-gray-50"><td class="px-5 py-3 text-gray-700">가맹비</td><td class="px-5 py-3 text-right">000만 원</td><td class="px-5 py-3 text-right">000만 원</td></tr>
+              <tr class="hover:bg-gray-50"><td class="px-5 py-3 text-gray-700">인테리어</td><td class="px-5 py-3 text-right">000만 원</td><td class="px-5 py-3 text-right">000만 원</td></tr>
+              <tr class="hover:bg-gray-50"><td class="px-5 py-3 text-gray-700">주방기기</td><td class="px-5 py-3 text-right">000만 원</td><td class="px-5 py-3 text-right">000만 원</td></tr>
+              <tr class="hover:bg-gray-50"><td class="px-5 py-3 text-gray-700">보증금 (교육)</td><td class="px-5 py-3 text-right">000만 원</td><td class="px-5 py-3 text-right">000만 원</td></tr>
+              <tr class="bg-gray-50 font-bold"><td class="px-5 py-3">합계 (보증금 제외)</td><td class="px-5 py-3 text-right text-brand">약 0,000만 원</td><td class="px-5 py-3 text-right text-brand">약 0,000만 원</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-gray-400 mt-3 text-center">※ 임차보증금 및 권리금은 별도입니다.</p>
+      </div>
+    </section>
+
+    <!-- 창업 절차 -->
+    <section id="process" class="py-16 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-center text-2xl md:text-3xl font-black mb-12">창업 절차</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="text-center"><div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-black text-lg mx-auto mb-3">1</div><h3 class="font-bold text-sm mb-1">상담 신청</h3><p class="text-xs text-gray-500">전화 또는 온라인 문의</p></div>
+          <div class="text-center"><div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-black text-lg mx-auto mb-3">2</div><h3 class="font-bold text-sm mb-1">본사 방문</h3><p class="text-xs text-gray-500">사업 설명 및 계획 협의</p></div>
+          <div class="text-center"><div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-black text-lg mx-auto mb-3">3</div><h3 class="font-bold text-sm mb-1">가맹 계약</h3><p class="text-xs text-gray-500">계약서 작성 및 가맹비 납부</p></div>
+          <div class="text-center"><div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-black text-lg mx-auto mb-3">4</div><h3 class="font-bold text-sm mb-1">입지 선정</h3><p class="text-xs text-gray-500">본사 상권 분석 지원</p></div>
+          <div class="text-center"><div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-black text-lg mx-auto mb-3">5</div><h3 class="font-bold text-sm mb-1">인테리어</h3><p class="text-xs text-gray-500">본사 지정 업체 시공</p></div>
+          <div class="text-center"><div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-black text-lg mx-auto mb-3">6</div><h3 class="font-bold text-sm mb-1">교육</h3><p class="text-xs text-gray-500">본사 교육장 현장 교육</p></div>
+          <div class="text-center"><div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-black text-lg mx-auto mb-3">7</div><h3 class="font-bold text-sm mb-1">오픈</h3><p class="text-xs text-gray-500">본사 오픈 지원 · 운영 시작</p></div>
+          <div class="text-center"><div class="w-12 h-12 border-2 border-brand text-brand rounded-full flex items-center justify-center text-2xl mx-auto mb-3">🎉</div><h3 class="font-bold text-sm mb-1">운영 지원</h3><p class="text-xs text-gray-500">지속적인 본사 지원</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-4 text-white text-center" style="background: linear-gradient(135deg, #8B2331, #4a0f0f);">
+      <h2 class="text-2xl md:text-3xl font-black mb-4">지금 바로 무료 상담을 신청하세요</h2>
+      <p class="text-gray-300 mb-8">궁금한 점은 무엇이든 편하게 물어보세요.<br>빠르게 연락드리겠습니다.</p>
+      <a href="contact.html" class="inline-block font-bold px-10 py-4 rounded text-lg text-white transition-colors" style="background:#B8860B;">가맹 문의하기 →</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-sm">
+        <div class="col-span-2 md:col-span-1"><p class="text-white font-black text-xl mb-2">쪽갈비</p><p>정통 쪽갈비 전문점</p></div>
+        <div><p class="text-white font-semibold mb-3">바로가기</p><div class="flex flex-col gap-2"><a href="menu.html" class="hover:text-white">메뉴</a><a href="stores.html" class="hover:text-white">매장 안내</a><a href="franchise.html" class="hover:text-white">가맹 안내</a><a href="contact.html" class="hover:text-white">가맹 문의</a></div></div>
+        <div><p class="text-white font-semibold mb-3">가맹 안내</p><div class="flex flex-col gap-2"><a href="franchise.html#cost" class="hover:text-white">창업 비용</a><a href="franchise.html#process" class="hover:text-white">창업 절차</a><a href="contact.html" class="hover:text-white">가맹 문의</a></div></div>
+        <div><p class="text-white font-semibold mb-3">연락처</p><p class="text-white font-bold">000-0000-0000</p><p class="text-xs mt-1 text-gray-500">평일 09:00 – 18:00</p></div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 text-xs text-gray-500">
+        <p>상호: 쪽갈비 | 대표자: 홍길동 | 사업자등록번호: 000-00-00000 | 주소: 서울특별시 OO구 OO동</p>
+        <p class="mt-1">© 2025 쪽갈비. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

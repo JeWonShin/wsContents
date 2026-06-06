@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>매장 안내 — 쪽갈비</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: '#8B2331', gold: '#B8860B' }, fontFamily: { sans: ['"Noto Sans KR"', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-black text-brand">쪽갈비</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="menu.html" class="text-gray-700 hover:text-brand transition-colors">메뉴</a>
+        <a href="stores.html" class="text-brand font-bold">매장 안내</a>
+        <a href="about.html" class="text-gray-700 hover:text-brand transition-colors">브랜드 소개</a>
+        <a href="franchise.html" class="text-gray-700 hover:text-brand transition-colors">가맹 안내</a>
+        <a href="news.html" class="text-gray-700 hover:text-brand transition-colors">공지사항</a>
+        <a href="contact.html" class="bg-brand text-white px-4 py-2 rounded hover:bg-red-900 transition-colors">가맹 문의</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden p-2 text-gray-700"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-nav" class="hidden md:hidden bg-white border-t text-sm font-medium">
+      <div class="flex flex-col divide-y px-4">
+        <a href="menu.html" class="py-3 text-gray-700">메뉴</a>
+        <a href="stores.html" class="py-3 text-brand font-bold">매장 안내</a>
+        <a href="about.html" class="py-3 text-gray-700">브랜드 소개</a>
+        <a href="franchise.html" class="py-3 text-gray-700">가맹 안내</a>
+        <a href="news.html" class="py-3 text-gray-700">공지사항</a>
+        <a href="contact.html" class="py-3 text-brand font-bold">가맹 문의</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-12 px-4 text-white text-center" style="background: linear-gradient(135deg, #1a0808, #8B2331);">
+      <h1 class="text-3xl md:text-4xl font-black mb-2">매장 안내</h1>
+      <p class="text-gray-300">가까운 쪽갈비 매장을 찾아보세요</p>
+    </section>
+
+    <section class="py-12 px-4">
+      <div class="max-w-5xl mx-auto">
+
+        <!-- 지역 필터 -->
+        <div class="flex gap-2 flex-wrap mb-8">
+          <button class="region-btn px-4 py-2 rounded-full text-sm font-medium bg-brand text-white" data-region="all">전체</button>
+          <button class="region-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-600 hover:border-brand hover:text-brand" data-region="서울">서울</button>
+          <button class="region-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-600 hover:border-brand hover:text-brand" data-region="경기">경기</button>
+          <button class="region-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-600 hover:border-brand hover:text-brand" data-region="부산">부산</button>
+        </div>
+
+        <!-- 지도 플레이스홀더 (추후 카카오맵으로 교체) -->
+        <div class="w-full h-64 rounded-xl mb-8 flex items-center justify-center text-gray-400 text-sm border-2 border-dashed border-gray-300 bg-gray-50">
+          <div class="text-center">
+            <p class="text-4xl mb-2">🗺️</p>
+            <p class="font-medium">지도는 추후 추가 예정입니다</p>
+            <p class="text-xs text-gray-400 mt-1">(카카오맵 연동 예정)</p>
+          </div>
+        </div>
+
+        <!-- 매장 목록 -->
+        <div id="store-list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="store-card border rounded-xl p-5 hover:shadow-md transition-shadow" data-region="서울">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-bold text-lg">강남점</h3>
+              <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">서울</span>
+            </div>
+            <div class="text-sm text-gray-600 flex flex-col gap-1.5">
+              <p class="flex gap-2"><span>📍</span><span>서울 강남구 테헤란로 000</span></p>
+              <p class="flex gap-2"><span>📞</span><a href="tel:02-0000-0001" class="hover:text-brand">02-0000-0001</a></p>
+              <p class="flex gap-2"><span>🕐</span><span>11:00 – 22:00</span></p>
+              <p class="flex gap-2"><span>🅿️</span><span>주차 가능</span></p>
+              <p class="flex gap-2"><span>📅</span><span>매주 월요일 정기 휴무</span></p>
+            </div>
+            <div class="mt-4 flex gap-2">
+              <a href="#" class="text-xs border border-brand text-brand px-3 py-1.5 rounded hover:bg-brand hover:text-white transition-colors">길찾기</a>
+              <a href="#" class="text-xs border border-gray-300 text-gray-600 px-3 py-1.5 rounded hover:border-brand hover:text-brand transition-colors">네이버 플레이스</a>
+            </div>
+          </div>
+
+          <div class="store-card border rounded-xl p-5 hover:shadow-md transition-shadow" data-region="서울">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-bold text-lg">홍대점</h3>
+              <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">서울</span>
+            </div>
+            <div class="text-sm text-gray-600 flex flex-col gap-1.5">
+              <p class="flex gap-2"><span>📍</span><span>서울 마포구 와우산로 000</span></p>
+              <p class="flex gap-2"><span>📞</span><a href="tel:02-0000-0002" class="hover:text-brand">02-0000-0002</a></p>
+              <p class="flex gap-2"><span>🕐</span><span>11:00 – 23:00</span></p>
+              <p class="flex gap-2"><span>🅿️</span><span>주차 불가 (근처 공영주차장 이용)</span></p>
+              <p class="flex gap-2"><span>📅</span><span>연중무휴</span></p>
+            </div>
+            <div class="mt-4 flex gap-2">
+              <a href="#" class="text-xs border border-brand text-brand px-3 py-1.5 rounded hover:bg-brand hover:text-white transition-colors">길찾기</a>
+              <a href="#" class="text-xs border border-gray-300 text-gray-600 px-3 py-1.5 rounded hover:border-brand hover:text-brand transition-colors">네이버 플레이스</a>
+            </div>
+          </div>
+
+          <div class="store-card border rounded-xl p-5 hover:shadow-md transition-shadow" data-region="경기">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-bold text-lg">수원점</h3>
+              <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">경기</span>
+            </div>
+            <div class="text-sm text-gray-600 flex flex-col gap-1.5">
+              <p class="flex gap-2"><span>📍</span><span>경기 수원시 영통구 000</span></p>
+              <p class="flex gap-2"><span>📞</span><a href="tel:031-0000-0003" class="hover:text-brand">031-0000-0003</a></p>
+              <p class="flex gap-2"><span>🕐</span><span>11:00 – 22:00</span></p>
+              <p class="flex gap-2"><span>🅿️</span><span>주차 가능</span></p>
+              <p class="flex gap-2"><span>📅</span><span>매주 월요일 정기 휴무</span></p>
+            </div>
+            <div class="mt-4 flex gap-2">
+              <a href="#" class="text-xs border border-brand text-brand px-3 py-1.5 rounded hover:bg-brand hover:text-white transition-colors">길찾기</a>
+              <a href="#" class="text-xs border border-gray-300 text-gray-600 px-3 py-1.5 rounded hover:border-brand hover:text-brand transition-colors">네이버 플레이스</a>
+            </div>
+          </div>
+
+          <div class="store-card border rounded-xl p-5 hover:shadow-md transition-shadow" data-region="부산">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-bold text-lg">부산 서면점</h3>
+              <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">부산</span>
+            </div>
+            <div class="text-sm text-gray-600 flex flex-col gap-1.5">
+              <p class="flex gap-2"><span>📍</span><span>부산 부산진구 서면로 000</span></p>
+              <p class="flex gap-2"><span>📞</span><a href="tel:051-0000-0004" class="hover:text-brand">051-0000-0004</a></p>
+              <p class="flex gap-2"><span>🕐</span><span>11:00 – 22:00</span></p>
+              <p class="flex gap-2"><span>🅿️</span><span>주차 가능</span></p>
+              <p class="flex gap-2"><span>📅</span><span>연중무휴</span></p>
+            </div>
+            <div class="mt-4 flex gap-2">
+              <a href="#" class="text-xs border border-brand text-brand px-3 py-1.5 rounded hover:bg-brand hover:text-white transition-colors">길찾기</a>
+              <a href="#" class="text-xs border border-gray-300 text-gray-600 px-3 py-1.5 rounded hover:border-brand hover:text-brand transition-colors">네이버 플레이스</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-sm">
+        <div class="col-span-2 md:col-span-1"><p class="text-white font-black text-xl mb-2">쪽갈비</p><p>정통 쪽갈비 전문점</p></div>
+        <div><p class="text-white font-semibold mb-3">바로가기</p><div class="flex flex-col gap-2"><a href="menu.html" class="hover:text-white">메뉴</a><a href="stores.html" class="hover:text-white">매장 안내</a><a href="franchise.html" class="hover:text-white">가맹 안내</a><a href="contact.html" class="hover:text-white">가맹 문의</a></div></div>
+        <div><p class="text-white font-semibold mb-3">가맹 안내</p><div class="flex flex-col gap-2"><a href="franchise.html" class="hover:text-white">가맹 소개</a><a href="contact.html" class="hover:text-white">가맹 문의</a></div></div>
+        <div><p class="text-white font-semibold mb-3">연락처</p><p class="text-white font-bold">000-0000-0000</p><p class="text-xs mt-1 text-gray-500">평일 09:00 – 18:00</p></div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 text-xs text-gray-500">
+        <p>상호: 쪽갈비 | 대표자: 홍길동 | 사업자등록번호: 000-00-00000 | 주소: 서울특별시 OO구 OO동</p>
+        <p class="mt-1">© 2025 쪽갈비. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const regionBtns = document.querySelectorAll('.region-btn');
+    const storeCards = document.querySelectorAll('.store-card');
+    regionBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const region = btn.dataset.region;
+        regionBtns.forEach(b => { b.className = 'region-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-600 hover:border-brand hover:text-brand'; });
+        btn.className = 'region-btn px-4 py-2 rounded-full text-sm font-medium bg-brand text-white';
+        storeCards.forEach(c => {
+          c.style.display = (region === 'all' || c.dataset.region === region) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
