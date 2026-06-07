@@ -148,6 +148,44 @@
         <a href="contact.html" class="inline-block text-white font-bold px-10 py-4 rounded text-lg transition-colors" style="background: #B8860B;">가맹 문의하기 →</a>
       </div>
     </section>
+
+    <!-- 간편 상담 신청 -->
+    <section class="py-16 px-4 bg-gray-50">
+      <div class="max-w-md mx-auto">
+        <h2 class="text-center text-2xl font-black mb-1">간편 상담 신청</h2>
+        <p class="text-center text-gray-500 text-sm mb-8">3가지만 입력하면 바로 연락드립니다</p>
+        <form id="quick-form" class="flex flex-col gap-3" novalidate>
+          <input type="text" name="name" placeholder="성함" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent">
+          <input type="tel" name="tel" placeholder="연락처 (010-0000-0000)" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent">
+          <select name="region" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white">
+            <option value="">창업 희망 지역 선택</option>
+            <option>서울</option><option>경기</option><option>인천</option>
+            <option>강원</option><option>충청북도</option><option>충청남도</option>
+            <option>전라북도</option><option>전라남도</option><option>경상북도</option>
+            <option>경상남도</option><option>부산</option><option>대구</option>
+            <option>광주</option><option>대전</option><option>울산</option><option>제주</option>
+          </select>
+          <label class="flex items-center gap-2 text-sm text-gray-500 cursor-pointer">
+            <input type="checkbox" name="privacy" required class="accent-brand shrink-0">
+            개인정보 수집·이용에 동의합니다
+            <a href="privacy.html" class="text-brand underline text-xs shrink-0">내용 보기</a>
+          </label>
+          <p id="quick-error" class="hidden text-xs text-red-500 -mt-1">모든 항목을 입력하고 동의해주세요.</p>
+          <button type="submit" id="quick-submit"
+            class="w-full bg-brand text-white py-4 rounded-lg font-bold text-base hover:bg-red-900 transition-colors disabled:opacity-50">
+            상담 신청하기
+          </button>
+        </form>
+        <div id="quick-success" class="hidden text-center py-8">
+          <p class="text-4xl mb-3">✅</p>
+          <p class="font-bold text-lg mb-1">신청이 완료되었습니다!</p>
+          <p class="text-gray-500 text-sm">빠른 시일 내에 연락드리겠습니다.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -192,5 +230,33 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      const form = document.getElementById('quick-form');
+      const success = document.getElementById('quick-success');
+      const errMsg = document.getElementById('quick-error');
+      const submitBtn = document.getElementById('quick-submit');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = form.querySelector('[name="name"]').value.trim();
+        const tel = form.querySelector('[name="tel"]').value.trim();
+        const region = form.querySelector('[name="region"]').value;
+        const privacy = form.querySelector('[name="privacy"]').checked;
+        const telOk = /^01[0-9]-\d{3,4}-\d{4}$/.test(tel);
+        if (!name || !telOk || !region || !privacy) {
+          errMsg.classList.remove('hidden');
+          return;
+        }
+        errMsg.classList.add('hidden');
+        submitBtn.disabled = true;
+        // TODO: Formspree 연동 시 fetch POST 추가
+        setTimeout(function () {
+          form.classList.add('hidden');
+          success.classList.remove('hidden');
+        }, 400);
+      });
+    })();
+  </script>
 </body>
 </html>
